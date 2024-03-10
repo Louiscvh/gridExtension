@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Grid Extension",
+  "version": "1.0",
+  "description": "Affiche une grille sur la page avec des options personnalisables.",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "32": "icon.png"
+    }
+  },
+  "icons": {
+    "32": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
